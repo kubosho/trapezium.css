@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>trapezium.css</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link id="theme" rel="stylesheet" href="./assets/styles/east.css" />
+    <script type="module" src="./assets/scripts/changeTheme.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>trapezium.css</h1>
+      <p>このページは<a href="https://github.com/kubosho/trapezium.css">trapezium.css</a>の見た目を確認するためのページです。</p>
+      <p>trapzeium.cssは4つのテーマが存在します。既定で適用しているのは<code translate="no">east.css</code>です。</p>
+      <p>現在適用されているテーマは<output id="applied-theme">east.css</output>です。</p>
+      <p id="change-theme-description">適用されているテーマをラジオボタンの操作で変更できます。</p>
+      <form id="theme-form" aria-describedby="change-theme-description">
+        <label>
+          <input type="radio" name="theme" value="east" checked />
+          east.css
+        </label>
+        <label>
+          <input type="radio" name="theme" value="west" />
+          west.css
+        </label>
+        <label>
+          <input type="radio" name="theme" value="south" />
+          south.css
+        </label>
+        <label>
+          <input type="radio" name="theme" value="north" />
+          north.css
+        </label>
+        <button type="submit">適用</button>
+      </form>
+    </header>
+
+    <main>
+      <h2>見出し：h2</h2>
+      <p>
+        トラペジウムは元乃木坂46の高山一実さんが、乃木坂46所属時代にダ・ヴィンチで連載していた小説を元に、単行本や文庫本という形で書籍化され、そして劇場版アニメ化された作品です。
+      </p>
+      <p>劇場版アニメは2024年5月10日に公開されました。本予告の動画はYouTubeに上がっています。</p>
+      <iframe
+        src="https://www.youtube.com/embed/VmS7wEpUpV8?si=DOpc_c4Fqs66Vgyd"
+        width="560"
+        height="315"
+        title="YouTube video player"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+      <p>また劇場版アニメのBlu-ray・DVDは2024年12月25日（水）発売です。</p>
+
+      <h3>見出し：h3</h3>
+      <p>名メディアのリンク</p>
+      <dl>
+        <dt>原作小説</dt>
+        <dd>
+          <a href="https://www.amazon.co.jp/dp/B086YJK7MC">トラペジウム（電子書籍・文庫版）</a>
+        </dd>
+        <dt>劇場版アニメ</dt>
+        <dd>
+          <a href="https://trapezium-movie.com/">映画『トラペジウム』公式サイト</a>
+        </dd>
+        <dt>劇場版アニメBlu-ray・DVD</dt>
+        <dd>
+          <a href="https://trapezium-movie.com/bddvd/">Blu-ray/DVD | 映画『トラペジウム』公式サイト</a>
+        </dd>
+        <dt>映画ノベライズ</dt>
+        <dd>
+          <a href="https://www.amazon.co.jp/dp/B0CZ6CCMVN">トラペジウム（電子書籍）</a>
+        </dd>
+      </dl>
+
+      <h4>見出し：h4</h4>
+      <p>東西南北は下記のメンバーから構成されます。</p>
+      <ul>
+        <li>東ゆう</li>
+        <li>大河くるみ</li>
+        <li>華鳥蘭子</li>
+        <li>亀井美嘉</li>
+      </ul>
+      <p>作中では下記の順番で東ゆうと友達になっていきました。</p>
+      <ol>
+        <li>華鳥蘭子</li>
+        <li>大河くるみ</li>
+        <li>亀井美嘉</li>
+      </ol>
+    </main>
+
+    <aside>
+      <h2>見出し：h2</h2>
+      <p>東西南北は四神をモチーフとしています。</p>
+      <blockquote cite="https://dot.asahi.com/articles/-/32578?page=1">
+        <p>
+          ――登場人物には、中国の神話に出てくる霊獣「四神」（東の青龍・南の朱雀・西の白虎・北の玄武）にちなんだ名前が付けられています。このモチーフはどこから来たのですか？
+        </p>
+        <p>
+          高山：東西南北にある学校が舞台なので、4パターンあるものや、四つがセットでバランスよく決まっているものって何だろうと調べている時に「四神」を見つけました。四神はそれぞれにカラーも決まっているので、絶対これにしようと思いました。
+        </p>
+        <p>
+          出典：<a href="https://dot.asahi.com/articles/-/32578?page=1"
+            >「乃木坂46にとって脅威だなと思うアイドルグループ」を小説に　乃木坂46・高山一実さんインタビュー | AERA dot. (アエラドット)</a
+          >
+        </p>
+      </blockquote>
+      <p>四神や方角を東西南北の名前に当てはめると下記の通りになります。</p>
+      <table>
+        <caption>
+          東西南北のメンバーと四神の対応表
+        </caption>
+        <thead>
+          <tr>
+            <th>四神</th>
+            <th>方角</th>
+            <th>名前と四神の対応</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>青龍</td>
+            <td>東</td>
+            <td>東「ゆう」</td>
+          </tr>
+          <tr>
+            <td>白虎</td>
+            <td>西</td>
+            <td>「大河」くるみ</td>
+          </tr>
+          <tr>
+            <td>朱雀</td>
+            <td>南</td>
+            <td>華「鳥」蘭子</td>
+          </tr>
+          <tr>
+            <td>玄武</td>
+            <td>北</td>
+            <td>「亀」井美嘉</td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+
+    <footer>
+      <hr />
+      <small>このページは<a href="https://github.com/kubosho/trapezium.css">trapezium.css</a>を用いて作られました。</small>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "trapezium.css",
+  "version": "1.0.0",
+  "description": "A classless CSS library from the \"shining stars\" of the south, west, north, and east.",
+  "scripts": {
+    "build": "sass src:dist",
+    "postbuild": "postcss dist/*.css --replace",
+    "copy": "cpx \"dist/*.css\" _site/assets/styles",
+    "preview": "npx http-server _site/",
+    "test": "stylelint **/*.scss"
+  },
+  "keywords": [
+    "CSS",
+    "classless"
+  ],
+  "private": true,
+  "author": "kubosho <ta2@o2p.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "@kubosho/configs": "^3.15.4",
+    "autoprefixer": "^10.4.20",
+    "cpx2": "^8.0.0",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.79.4",
+    "stylelint-config-recess-order": "^5.1.1",
+    "stylelint-order": "^6.0.4"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ]
+}

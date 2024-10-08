@@ -1,0 +1,95 @@
+name: Releases
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Save node_modules
+        id: cache-node-modules
+        uses: actions/cache/save@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+  build:
+    needs:
+      - setup
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Build
+        run: npm run build
+      - name: Copy artifacts
+        run: npm run copy
+      - name: Save artifacts to cache
+        id: cache-artifacts
+        uses: actions/cache/save@v4
+        with:
+          path: dist
+          key: dist-${{ github.sha }}
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  release:
+    needs:
+      - setup
+      - build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Restore artifacts from cache
+        id: cache-artifacts
+        uses: actions/cache/restore@v4
+        with:
+          path: dist
+          key: dist-${{ github.sha }}
+      - name: Release package
+        run: npx semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  deploy:
+    needs:
+      - setup
+      - build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      id-token: write
+      pages: write
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

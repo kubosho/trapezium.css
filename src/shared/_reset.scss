@@ -1,0 +1,59 @@
+/**
+* Original source by Andy Bell
+* https://piccalil.li/blog/a-more-modern-css-reset/
+* Modified by KUBOTA Shota
+* License: CC BY 3.0 https://creativecommons.org/licenses/by/3.0/
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  text-size-adjust: none;
+}
+
+/* Remove default margin on body */
+body {
+  margin: 0;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
