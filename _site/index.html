@@ -89,6 +89,34 @@
         <li>大河くるみ</li>
         <li>亀井美嘉</li>
       </ol>
+
+      <section>
+        <h2>見出し：h2</h2>
+        <p>めちゃ×2フライデーでは東西南北に行ってほしい観光スポットを募集しています！</p>
+        <p>下記のフォームから各項目を記入して投稿してください。</p>
+        <form>
+          <label for="name">名前</label>
+          <input type="text" name="name" id="name" value="" />
+          <label for="nickname">ニックネーム</label>
+          <input type="text" name="nickname" id="nickname" value="" />
+          <fieldset>
+            <legend>行きたい方角</legend>
+            <input type="radio" name="direction" id="east" value="east" />
+            <label for="east">東</label>
+            <input type="radio" name="direction" id="west" value="west" />
+            <label for="west">西</label>
+            <input type="radio" name="direction" id="south" value="south" />
+            <label for="south">南</label>
+            <input type="radio" name="direction" id="north" value="north" />
+            <label for="north">北</label>
+          </fieldset>
+          <label for="comment">コメント</label>
+          <textarea name="comment" id="comment"></textarea>
+          <input type="checkbox" name="agreement" id="agreement" value="agreement" />
+          <label for="agreement"><a href="#">プライバシーポリシー</a>に同意する</label>
+          <button type="submit">投稿</button>
+        </form>
+      </section>
     </main>
 
     <aside>
