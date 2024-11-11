@@ -1,10 +1,10 @@
-@import './shared/_foundation.scss';
-@import './shared/_variables.scss';
+@use 'shared/_foundation.scss';
+@use 'shared/_variables.scss';
 
 h2::first-letter,
 h3::first-letter,
 h4::first-letter,
 h5::first-letter,
 h6::first-letter {
-  color: $south-color;
+  color: variables.$south-color;
 }
