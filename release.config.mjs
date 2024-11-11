@@ -1,4 +1,4 @@
-import releaseConfig from '@kubosho/configs/semantic_release/index.mjs';
+import releaseConfig from '@kubosho/configs/semantic_release';
 
 export default {
   ...releaseConfig,
