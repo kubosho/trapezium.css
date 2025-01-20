@@ -17,7 +17,7 @@
   "author": "kubosho <ta2@o2p.jp>",
   "license": "MIT",
   "devDependencies": {
-    "@kubosho/configs": "^4.0.15",
+    "@kubosho/configs": "^4.0.19",
     "autoprefixer": "^10.4.20",
     "cpx2": "^8.0.0",
     "cssnano": "^7.0.6",
