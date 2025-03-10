@@ -18,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "@kubosho/configs": "^4.0.15",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "cpx2": "^8.0.0",
     "cssnano": "^7.0.6",
     "postcss": "^8.4.49",
